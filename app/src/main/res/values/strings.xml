@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AudioClient</string>
+    <string name="instructions">
+        The way the app works is simple. Simply hit start service
+        to connect to the service. Once connected you should now be
+        able to select a clip from the list. Selecting a clip enables
+        the play playback button which allows you to start playing the
+        clip. You must hit stop playback button before playing a
+        different clip.
+    </string>
+</resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFFFF"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/audio_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <View
+                    android:id="@+id/overlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:background="#F5F5F5"
+                    android:alpha="0.5"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/bruh"
+                android:layout_below="@id/frameLayout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/start_service_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="start service"/>
+
+                <Button
+                    android:id="@+id/play_playback_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="play playback"/>
+
+                <Button
+                    android:id="@+id/pause_playback_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="pause playback"/>
+
+                <Button
+                    android:id="@+id/resume_playback_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="resume playback"/>
+
+                <Button
+                    android:id="@+id/stop_playback_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="stop playback"/>
+
+                <Button
+                    android:id="@+id/stop_service_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="showDialog"
+                    android:text="stop service"/>
+
+            </LinearLayout>
+
+            <!--            <TextView-->
+            <!--                android:layout_below="@+id/bruh"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:gravity="center"-->
+            <!--                android:text="@string/instructions"-->
+            <!--                android:textStyle="bold"-->
+            <!--                android:paddingStart="20sp"-->
+            <!--                android:paddingEnd="20sp"-->
+            <!--                android:textSize="16sp" />-->
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
